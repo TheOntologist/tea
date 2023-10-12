@@ -37,9 +37,21 @@
     
 
 
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#hasQuality -->
+
+    <owl:ObjectProperty rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#hasQuality"/>
+    
+
+
     <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#isPartOf -->
 
     <owl:ObjectProperty rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#isPartOf"/>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#originatesFrom -->
+
+    <owl:ObjectProperty rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#originatesFrom"/>
     
 
 
@@ -54,10 +66,31 @@
     
 
 
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Astringent -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Astringent">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaFlavour"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Black -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Black">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafColour"/>
+    </owl:Class>
+    
+
+
     <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#BlackTea -->
 
     <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#BlackTea">
-        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafColour"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#hasQuality"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Black"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
     </owl:Class>
     
@@ -71,6 +104,14 @@
     
 
 
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Bold -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Bold">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaFlavour"/>
+    </owl:Class>
+    
+
+
     <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#BrokenOrangePeko -->
 
     <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#BrokenOrangePeko">
@@ -79,11 +120,50 @@
     
 
 
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Brown -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Brown">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafColour"/>
+    </owl:Class>
+    
+
+
     <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#BrownTea -->
 
     <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#BrownTea">
-        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafColour"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#hasQuality"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Brown"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#CeylongBrokenOrangePeko -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#CeylongBrokenOrangePeko">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#hasQuality"/>
+                        <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Black"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#hasQuality"/>
+                        <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#BrokenOrangePeko"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#originatesFrom"/>
+                        <owl:hasValue rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#SriLanka"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -107,10 +187,26 @@
     
 
 
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Earthy -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Earthy">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaFlavour"/>
+    </owl:Class>
+    
+
+
     <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Fannings -->
 
     <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Fannings">
         <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafSize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Fruity -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Fruity">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaFlavour"/>
     </owl:Class>
     
 
@@ -123,19 +219,24 @@
     
 
 
-    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#GreenTea -->
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Green -->
 
-    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#GreenTea">
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Green">
         <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafColour"/>
-        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
     </owl:Class>
     
 
 
-    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeaafShape -->
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#GreenTea -->
 
-    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeaafShape">
-        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaQuality"/>
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#GreenTea">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#hasQuality"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Green"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
     </owl:Class>
     
 
@@ -143,6 +244,14 @@
     <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafColour -->
 
     <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafColour">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafShape -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafShape">
         <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaQuality"/>
     </owl:Class>
     
@@ -156,6 +265,14 @@
     
 
 
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Malty -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Malty">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaFlavour"/>
+    </owl:Class>
+    
+
+
     <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#OrangePeko -->
 
     <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#OrangePeko">
@@ -164,10 +281,46 @@
     
 
 
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Oxidation -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Oxidation">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Process -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Process"/>
+    
+
+
     <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#SingleEstateTea -->
 
     <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#SingleEstateTea">
         <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Smokey -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Smokey"/>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Smoking -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Smoking">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Process"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Sweet -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Sweet">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaFlavour"/>
     </owl:Class>
     
 
@@ -187,6 +340,14 @@
                 <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#CountryRegion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaFlavour -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaFlavour">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaQuality"/>
     </owl:Class>
     
 
