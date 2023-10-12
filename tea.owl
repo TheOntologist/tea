@@ -37,6 +37,12 @@
     
 
 
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#hasPart"/>
+    
+
+
     <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#hasQuality -->
 
     <owl:ObjectProperty rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#hasQuality"/>
@@ -51,7 +57,9 @@
 
     <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#originatesFrom -->
 
-    <owl:ObjectProperty rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#originatesFrom"/>
+    <owl:ObjectProperty rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#originatesFrom">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
     
 
 
@@ -63,6 +71,28 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#AssamTea -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#AssamTea">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#hasQuality"/>
+                        <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Black"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#originatesFrom"/>
+                        <owl:hasValue rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Assam"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
     
 
 
@@ -99,7 +129,18 @@
     <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#BlendedTea -->
 
     <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#BlendedTea">
-        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#hasPart"/>
+                        <owl:onClass rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -138,6 +179,28 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#CeylonTea -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#CeylonTea">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#hasQuality"/>
+                        <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Black"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#originatesFrom"/>
+                        <owl:hasValue rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#SriLanka"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -187,10 +250,58 @@
     
 
 
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#DarjeelingTea -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#DarjeelingTea">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#hasQuality"/>
+                        <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Black"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#originatesFrom"/>
+                        <owl:hasValue rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Darjeeling"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
     <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Earthy -->
 
     <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Earthy">
         <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaFlavour"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#EnglishBreakfastTea -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#EnglishBreakfastTea">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#hasPart"/>
+                        <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#AssamTea"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#hasPart"/>
+                        <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#CeylonTea"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#hasPart"/>
+                        <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#DarjeelingTea"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
@@ -298,14 +409,27 @@
     <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#SingleEstateTea -->
 
     <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#SingleEstateTea">
-        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#originatesFrom"/>
+                        <owl:onClass rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaEstate"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
 
     <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Smokey -->
 
-    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Smokey"/>
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Smokey">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaFlavour"/>
+    </owl:Class>
     
 
 
@@ -334,6 +458,7 @@
     <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaEstate -->
 
     <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaEstate">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#CountryRegion"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#isPartOf"/>
@@ -444,6 +569,30 @@
     <owl:NamedIndividual rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#taiwan">
         <rdf:type rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Country"/>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Assam"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#China"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Darjeeling"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#India"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Kenya"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Nepal"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#SriLanka"/>
+            <rdf:Description rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#taiwan"/>
+        </owl:distinctMembers>
+    </rdf:Description>
 </rdf:RDF>
 
 
