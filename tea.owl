@@ -180,7 +180,14 @@
 
     <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaEstate -->
 
-    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaEstate"/>
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaEstate">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#CountryRegion"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
