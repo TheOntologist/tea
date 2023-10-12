@@ -1,0 +1,34 @@
+Qualities:
+flavour bocabulary.
+Size - bop, op, fgop gop, tgfop, etc
+leaf shape and curl
+
+Colour: green, brown and black - degree of oxidation
+
+sites:
+location: Country, region and estate (is a darjeeling tea any tea from Darjeeling?)
+
+continuant:
+Tea: the leaf itself
+
+Class: Tea
+SubClassOf:
+hasSize some LeafSize,
+hasColour some TeaColour,
+hasOrigin some GeographicalLocation,
+hasLeafShape
+hasFlabours
+
+Portion of Tea:
+enables blended tea - english breakfast tea; involves ratios.
+
+Procewsses:
+brewing
+Pouring
+MakingTea
+
+hasInput tea, water at certain temperature
+defining pre- and post-lactarianism
+
+http://tea.wikia.com/wiki/List_of_tea_types
+imperial tea of lincoln.

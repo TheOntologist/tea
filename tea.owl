@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://owl.cs.manchester.ac.uk/ontology/tea.owl#"
+     xml:base="http://owl.cs.manchester.ac.uk/ontology/tea.owl"
+     xmlns:tea="http://owl.cs.manchester.ac.uk/ontology/tea.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl">
+        <rdfs:label>Tea Ontology</rdfs:label>
+        <dc:creator>Robert Stevens</dc:creator>
+        <dc:description>An ontology of leaf tea and its characteristics</dc:description>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#isPartOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#BlackTea -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#BlackTea">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafColour"/>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#BlendedTea -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#BlendedTea">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#BrokenOrangePeko -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#BrokenOrangePeko">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafSize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#BrownTea -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#BrownTea">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafColour"/>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Country -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Country"/>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#CountryRegion -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#CountryRegion">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#isPartOf"/>
+                <owl:someValuesFrom rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Country"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Fannings -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Fannings">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafSize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#GoldenFloweryOrangePeko -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#GoldenFloweryOrangePeko">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafSize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#GreenTea -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#GreenTea">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafColour"/>
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeaafShape -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeaafShape">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafColour -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafColour">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafSize -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafSize">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaQuality"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#OrangePeko -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#OrangePeko">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafSize"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#SingleEstateTea -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#SingleEstateTea">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
+    </owl:Class>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Tea"/>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaEstate -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaEstate"/>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaLeaf -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaLeaf"/>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaQuality -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TeaQuality"/>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#TippyGoldenFloweryOrangePeko -->
+
+    <owl:Class rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#TippyGoldenFloweryOrangePeko">
+        <rdfs:subClassOf rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#LeafSize"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Assam -->
+
+    <owl:NamedIndividual rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Assam">
+        <rdf:type rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#CountryRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#China -->
+
+    <owl:NamedIndividual rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#China">
+        <rdf:type rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Darjeeling -->
+
+    <owl:NamedIndividual rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Darjeeling">
+        <rdf:type rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#CountryRegion"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#India -->
+
+    <owl:NamedIndividual rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#India">
+        <rdf:type rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Kenya -->
+
+    <owl:NamedIndividual rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Kenya">
+        <rdf:type rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#Nepal -->
+
+    <owl:NamedIndividual rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Nepal">
+        <rdf:type rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#SriLanka -->
+
+    <owl:NamedIndividual rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#SriLanka">
+        <rdf:type rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://owl.cs.manchester.ac.uk/ontology/tea.owl#taiwan -->
+
+    <owl:NamedIndividual rdf:about="http://owl.cs.manchester.ac.uk/ontology/tea.owl#taiwan">
+        <rdf:type rdf:resource="http://owl.cs.manchester.ac.uk/ontology/tea.owl#Country"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1787) http://owlapi.sourceforge.net -->
+
